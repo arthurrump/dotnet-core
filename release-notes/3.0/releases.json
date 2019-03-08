@@ -5,7 +5,7 @@
   "latest-runtime": "3.0.0-preview3-27503-5",
   "latest-sdk": "3.0.100-preview3-010431",
   "support-phase": "preview",
-  "eol-date": null,
+  "eol-date": "",
   "lifecycle-policy": "https://www.microsoft.com/net/support/policy",
   "releases": [
     {
