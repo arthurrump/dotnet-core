@@ -12,10 +12,10 @@ This table describes support type, supported patch version and end of support da
 
 |  Version  |  Release Date | Support Level | Supported Patch Version | End of Support |
 | -- | -- | -- | -- | -- |
-| [.NET Core 2.2](https://blogs.msdn.microsoft.com/dotnet/) | December 04, 2018 | Current | [2.2.2](https://www.microsoft.com/net/download/dotnet-core/runtime-2.2.1) | |
-| [.NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1) | May 30, 2018 | LTS | [2.1.8](https://www.microsoft.com/net/download/dotnet-core/runtime-2.1.7) | At least three years from LTS declaration (August 21, 2018). |
-| [.NET Core 1.1](https://blogs.msdn.microsoft.com/dotnet/2016/11/16/announcing-net-core-1-1/) | November 16, 2016 | Maintenance | [1.1.11](https://www.microsoft.com/net/download/dotnet-core/runtime-1.1.10) | June 27, 2019 |
-| [.NET Core 1.0](https://blogs.msdn.microsoft.com/dotnet/2016/06/27/announcing-net-core-1-0/) | June 27, 2016 | Maintenance | [1.0.14](https://www.microsoft.com/net/download/dotnet-core/runtime-1.0.13) | June 27, 2019 |
+| [.NET Core 2.2](https://aka.ms/netcore22announce) | December 04, 2018 | Current | [2.2.2](https://www.microsoft.com/net/download/dotnet-core/runtime-2.2.2) | |
+| [.NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1) | May 30, 2018 | LTS | [2.1.8](https://www.microsoft.com/net/download/dotnet-core/runtime-2.1.8) | At least three years from LTS declaration (August 21, 2018). |
+| [.NET Core 1.1](https://blogs.msdn.microsoft.com/dotnet/2016/11/16/announcing-net-core-1-1/) | November 16, 2016 | Maintenance | [1.1.11](https://www.microsoft.com/net/download/dotnet-core/runtime-1.1.11) | June 27, 2019 |
+| [.NET Core 1.0](https://blogs.msdn.microsoft.com/dotnet/2016/06/27/announcing-net-core-1-0/) | June 27, 2016 | Maintenance | [1.0.14](https://www.microsoft.com/net/download/dotnet-core/runtime-1.0.14) | June 27, 2019 |
 
 ## Release Types
 
@@ -45,7 +45,7 @@ Current releases are supported for the following timeframe:
 
 * Three months after a subsequent **Current** or **LTS** release
 
-###Maintenance releases
+### Maintenance releases
 
 Maintenance releases are in the last stage of the lifecycle . During Maintenance, a release will still receive security updates. The length of Maintenance time is determined by the type of release it was previously; as described in the above section.
 
