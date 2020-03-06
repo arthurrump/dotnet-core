@@ -35,7 +35,7 @@
             "product": ".NET Core",
             "support-phase": "lts",
             "eol-date": "2021-08-21",
-            "releases.json": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/2.1/releases.json"
+            "releases.json": "https://github.com/arthurrump/dotnet-core/raw/github-url/release-notes/2.1/releases.json"
         },
         {
             "channel-version": "2.2",
