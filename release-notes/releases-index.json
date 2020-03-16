@@ -10,7 +10,7 @@
             "product": ".NET",
             "support-phase": "preview",
             "eol-date": null,
-            "releases.json": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/5.0/releases.json"
+            "releases.json": "https://github.com/arthurrump/dotnet-core/raw/github-url/release-notes/5.0/releases.json"
         },
         {
             "channel-version": "3.1",
