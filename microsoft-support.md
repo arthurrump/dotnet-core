@@ -1,4 +1,4 @@
-# Microsoft Support for .NET Core
+# Microsoft .NET Core support lifecycle
 
 Every Microsoft product has a lifecycle, including .NET Core. The lifecycle begins when a product is released and ends when it's no longer supported. Knowing key dates in this lifecycle helps you make informed decisions about when to upgrade or make other changes to your software. This product is governed by the [Microsoft Modern Lifecycle](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 
@@ -12,8 +12,8 @@ This table describes support type, supported patch version and end of support da
 
 |  Version  |  Release Date | Support Level | Supported Patch Version | End of Support |
 | -- | -- | -- | -- | -- |
-| [.NET Core 3.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/) | December 3, 2019 | LTS | [3.1.4](https://dotnet.microsoft.com/download/dotnet-core/3.1) | December 3, 2022 |
-| [.NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1) | May 30, 2018 | LTS | [2.1.18](https://dotnet.microsoft.com/download/dotnet-core/2.1) | August 21, 2021 |
+| [.NET Core 3.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/) | December 3, 2019 | LTS | [3.1.5](https://dotnet.microsoft.com/download/dotnet-core/3.1) | December 3, 2022 |
+| [.NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1) | May 30, 2018 | LTS | [2.1.19](https://dotnet.microsoft.com/download/dotnet-core/2.1) | August 21, 2021 |
 
 For previous versions, [see here](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
 
