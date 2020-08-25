@@ -1,12 +1,12 @@
-# dotnetsay .NET Core Global Tools Sample
+# dotnetsay .NET Tool Sample
 
-This sample demonstrates how to use and create .NET Core Global Tools. It works on Windows, macOS and Linux.
+This sample demonstrates how to use and create .NET Tools. It works on Windows, macOS and Linux.
 
-You must have [.NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1) or higher installed.
+You must have the .NET SDK installed, [.NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1) or higher.
 
-## Try the pre-built `dotnetsay` Global Tool
+## Installation
 
-You can quickly install and try the [dotnetsay global tool from nuget.org](https://www.nuget.org/packages/dotnetsay/) using the following commands.
+You can quickly install and try the [dotnetsay](https://www.nuget.org/packages/dotnetsay/):
 
 ```console
 dotnet tool install -g dotnetsay
@@ -20,16 +20,6 @@ You can uninstall the tool using the following command.
 ```console
 dotnet tool uninstall -g dotnetsay
 ```
-
-## Getting the sample
-
-The easiest way to get the sample is by cloning the samples repository with [git](https://git-scm.com/downloads), using the following instructions.
-
-```console
-git clone https://github.com/dotnet/core/
-```
-
-You can also [download the repository as a zip](https://github.com/dotnet/core/archive/master.zip).
 
 ## Build the Tool from source
 
@@ -76,20 +66,24 @@ You can make tools debuggable with [sourcelink](https://github.com/dotnet/source
   <EmbedUntrackedSources>true</EmbedUntrackedSources>
 </PropertyGroup>
 
-<ItemGroup Condition="'$(ContinuousIntegrationBuild)'=='true'">
-  <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-62909-01" PrivateAssets="All"/>
+<ItemGroup>
+  <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
 </ItemGroup>
 ```
 
-> Note: This example conditionalizes the `PackageReference` to the `ContinuousIntegrationBuild` property being set. There is no problem running SourceLink on every build, however, it will fail if it cannot find a `.git` directory. Given that behavior, it may be easier to use the approach shown above.
+The [dotnetsay project](dotnetsay.csproj) doesn't add these properties or the `PackageReference` but relies on the same information in the [Directory.build.props](../Directory.build.props) in the parent directory.
 
-Use [`ContinuousIntegrationBuild`](https://github.com/dotnet/sourcelink/blob/master/docs/README.md#continuousintegrationbuild) when producing official builds. The simplest way to do that is by packing with an additional property set.
+> Note: The approach used in [Directory.build.props](../Directory.build.props) conditionalizes sourcelink properties and `PackageReference` to the `ContinuousIntegrationBuild` property being set. There is no problem running SourceLink on every build, however, it isn't necessary. 
+
+Use [`ContinuousIntegrationBuild`](https://github.com/dotnet/sourcelink/blob/master/docs/README.md#continuousintegrationbuild) when producing official builds. If you don't, the sourcelink information will be wrong. The simplest way to do that is by packing with an additional property set, as follows.
 
 ```console
-dotnet pack -c Release -o nupkg /p:ContinuousIntegrationBuild=true
+dotnet pack /p:ContinuousIntegrationBuild=true
 ```
 
-Make sure to build official packages from repositories with stable commit hashes. If you build from a branch whose commits are later [squashed](https://help.github.com/articles/about-pull-request-merges/), then the commit hashs will not be found and sourcelink will not work correctly.
+Make sure to build official packages from branches/repositories with stable commit hashes. If you build from a branch whose commits are later [squashed](https://help.github.com/articles/about-pull-request-merges/), then the commit hashs will not be found and sourcelink will not work correctly.
+
+SourceLink will fail if it cannot find a `.git` directory. This can happen if you build projects in containers at solution root and not repo root for example. There are solutions to that problem described at the [sourcelink repo](https://github.com/dotnet/sourcelink).
 
 ## Debug Tools with Visual Studio
 
