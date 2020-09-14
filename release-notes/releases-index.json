@@ -2,13 +2,13 @@
     "releases-index": [
         {
             "channel-version": "5.0",
-            "latest-release": "5.0.0-preview.8",
-            "latest-release-date": "2020-08-25",
+            "latest-release": "5.0.0-rc.1",
+            "latest-release-date": "2020-09-14",
             "security": false,
-            "latest-runtime": "5.0.0-preview.8.20407.11",
-            "latest-sdk": "5.0.100-preview.8.20417.9",
+            "latest-runtime": "5.0.0-rc.1.20451.14",
+            "latest-sdk": "5.0.100-rc.1.20452.10",
             "product": ".NET Core",
-            "support-phase": "preview",
+            "support-phase": "rc",
             "releases.json": "https://github.com/arthurrump/dotnet-core/raw/github-url/release-notes/5.0/releases.json"
         },
         {
